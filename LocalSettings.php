@@ -240,7 +240,8 @@ $wgExtraNamespaces[NS_GEO] = "Geo";
 $wgExtraNamespaces[NS_GEO_TALK] = "Geo_talk";
 $wgContentNamespaces[] = 3000;
 #GEO namespace protection
-$wgNamespaceProtection[NS_GEO] = ['geomapper-edit'];$wgNamespaceProtection[NS_GEO_TALK] = ['geomapper-edit'];
+$wgNamespaceProtection[NS_GEO] = ['geomapper-edit'];
+$wgNamespaceProtection[NS_GEO_TALK] = ['geomapper-edit'];
 $wgGroupPermissions['geomapper']['geomapper-edit'] = true;
 
 #FA namespace
