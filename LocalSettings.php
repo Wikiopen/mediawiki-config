@@ -150,7 +150,8 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TitleBlacklist' );
-require_once "$IP/extensions/TorBlock/TorBlock.php";wfLoadSkin( 'Metrolook' );
+require_once "$IP/extensions/TorBlock/TorBlock.php";
+wfLoadSkin( 'Metrolook' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'AbuseFilter' );
@@ -160,7 +161,8 @@ wfLoadExtension( 'AntiSpoof' );
 $wgMetrolookDisableAvatar = true;
 $wgGroupPermissions['sysop']['abusefilter-modify'] = true;
 $wgGroupPermissions['*']['abusefilter-log-detail'] = true;
-$wgGroupPermissions['*']['abusefilter-view'] = true;$wgGroupPermissions['*']['abusefilter-log'] = true;
+$wgGroupPermissions['*']['abusefilter-view'] = true;
+$wgGroupPermissions['*']['abusefilter-log'] = true;
 $wgGroupPermissions['sysop']['abusefilter-private'] = true;
 $wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 $wgGroupPermissions['user']['move'] = false;
@@ -218,7 +220,8 @@ $wgNotificationSenderName = "World Wiki Notifications";
 #revdel for admins
 $wgGroupPermissions['sysop']['deleterevision'] = true;
 
-#Disable all core TALK namespaces except for trusted$wgNamespaceProtection[NS_TALK] = ['trusted-edit'];
+#Disable all core TALK namespaces except for trusted
+$wgNamespaceProtection[NS_TALK] = ['trusted-edit'];
 $wgNamespaceProtection[NS_USER_TALK] = ['trusted-edit'];
 $wgNamespaceProtection[NS_PROJECT_TALK] = ['trusted-edit'];
 $wgNamespaceProtection[NS_FILE_TALK] = ['trusted-edit'];
