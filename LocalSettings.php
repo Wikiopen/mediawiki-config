@@ -256,8 +256,8 @@ $wgNamespaceProtection[NS_FA_TALK] = ['trusted-edit'];
 #BIO namespace
 define("NS_BIO", 3004);
 define("NS_BIO_TALK", 3005);
-$wgExtraNamespaces[NS_BIO] = "Geo";
-$wgExtraNamespaces[NS_BIO_TALK] = "Geo_talk";
+$wgExtraNamespaces[NS_BIO] = "Bio";
+$wgExtraNamespaces[NS_BIO_TALK] = "Bio_talk";
 $wgContentNamespaces[] = 3004;
 #BIO namespace protection
 $wgNamespaceProtection[NS_BIO] = ['trusted-edit'];
