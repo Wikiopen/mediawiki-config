@@ -52,7 +52,7 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "mysql";
+$wgDBtype = "mysql";j
 $wgDBserver = "127.0.0.1";
 
 # MySQL specific settings
@@ -126,6 +126,7 @@ wfLoadSkin( 'Modern' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Vector' );
 
+$wgRawHtml = true;
 
 # Enabled extensions. Most of the extensions are enabled by adding
 # wfLoadExtensions('ExtensionName');
