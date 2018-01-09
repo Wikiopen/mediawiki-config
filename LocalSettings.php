@@ -52,7 +52,7 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "mysql";j
+$wgDBtype = "mysql";
 $wgDBserver = "127.0.0.1";
 
 # MySQL specific settings
