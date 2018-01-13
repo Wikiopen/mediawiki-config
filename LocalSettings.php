@@ -15,7 +15,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
         exit;
 }
 # Load PrivateSettings (e.g. wgDBpassword)
-require_once( "/var/www/html/wiki/config/PrivateSettings.php" );
+require_once( "/var/www/html/w/config/PrivateSettings.php" );
 
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
