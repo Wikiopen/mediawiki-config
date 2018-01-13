@@ -29,6 +29,8 @@ $wgMetaNamespace = "Project";
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
 $wgScriptPath = "/wiki";
+$wgScriptExtension = ".php";
+$wgArticlePath = "{$wgScriptPath}/$1";;
 
 ## The protocol and server name to use in fully-qualified URLs
 $wgServer = "https://wiki.org.uk";
