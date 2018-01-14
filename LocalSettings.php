@@ -138,6 +138,7 @@ wfLoadExtension( 'Cite' );
 require_once "$IP/extensions/Scribunto/Scribunto.php";
 $wgScribuntoDefaultEngine = 'luastandalone';
 wfLoadExtension( 'Echo' );
+wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'ConfirmEdit' );
 wfLoadExtension( 'Gadgets' );
