@@ -122,8 +122,8 @@ $wgGroupPermissions['*']['edit'] = false;
 $wgDefaultSkin = "vector";
 
 # Enabled skins.
-# The following skins were automatically enabled:
 wfLoadSkin( 'CologneBlue' );
+wfLoadSkin( 'Metrolook' );
 wfLoadSkin( 'Modern' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Vector' );
@@ -134,13 +134,14 @@ $wgRawHtml = true;
 # wfLoadExtensions('ExtensionName');
 # to LocalSettings.php. Check specific extension documentation for more details.
 # The following extensions were automatically enabled:
+wfLoadExtension( 'AbuseFilter' );
+wfLoadExtension( 'AntiSpoof' );
+wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
-require_once "$IP/extensions/Scribunto/Scribunto.php";
-$wgScribuntoDefaultEngine = 'luastandalone';
-wfLoadExtension( 'Echo' );
-wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtension( 'Echo' );
+wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
@@ -151,15 +152,14 @@ wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'PdfHandler' );
 wfLoadExtension( 'Poem' );
 wfLoadExtension( 'Renameuser' );
+require_once "$IP/extensions/Scribunto/Scribunto.php";
+$wgScribuntoDefaultEngine = 'luastandalone';
 wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TitleBlacklist' );
 require_once "$IP/extensions/TorBlock/TorBlock.php";
-wfLoadSkin( 'Metrolook' );
 wfLoadExtension( 'WikiEditor' );
-wfLoadExtension( 'CheckUser' );
-wfLoadExtension( 'AbuseFilter' );
-wfLoadExtension( 'AntiSpoof' );
+
 # End of automatically generated settings.
 # Add more configuration options below.
 $wgMetrolookDisableAvatar = true;
@@ -203,6 +203,7 @@ $wgGroupPermissions['user']['torunblocked'] = false;
 $wgEnableAPI = true;
 
 #for mobile view
+
 wfLoadSkin( 'MinervaNeue' );
 wfLoadExtension( 'MobileFrontend' );
 $wgMFAutodetectMobileView = true;
