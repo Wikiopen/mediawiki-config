@@ -126,6 +126,7 @@ wfLoadSkin( 'CologneBlue' );
 wfLoadSkin( 'Metrolook' );
 wfLoadSkin( 'Modern' );
 wfLoadSkin( 'MonoBook' );
+wfLoadSkin( 'Timeless' );
 wfLoadSkin( 'Vector' );
 
 $wgRawHtml = true;
