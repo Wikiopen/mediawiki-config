@@ -280,3 +280,7 @@ define( 'NS_TECH_TALK', 1601 );
 
 $wgExtraNamespaces[NS_TECH] = "Tech";
 $wgExtraNamespaces[NS_TECH_TALK] = "Tech_talk";
+
+$wgNamespacesWithSubpages[NS_TECH] = true;  
+
+$wgContentNamespaces[] = 1600;
