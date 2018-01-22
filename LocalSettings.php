@@ -277,3 +277,6 @@ $wgNamespaceProtection[NS_BIO_TALK] = ['trusted-edit'];
 
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
+
+$wgExtraNamespaces[NS_TECH] = "Tech";
+$wgExtraNamespaces[NS_TECH_TALK] = "Tech_talk";
