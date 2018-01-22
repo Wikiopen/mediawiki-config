@@ -272,3 +272,8 @@ $wgContentNamespaces[] = 3004;
 #BIO namespace protection
 $wgNamespaceProtection[NS_BIO] = ['trusted-edit'];
 $wgNamespaceProtection[NS_BIO_TALK] = ['trusted-edit'];
+
+
+
+define( 'NS_TECH', 1600 );
+define( 'NS_TECH_TALK', 1601 );
