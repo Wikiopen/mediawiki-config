@@ -284,3 +284,4 @@ $wgExtraNamespaces[NS_TECH_TALK] = "Tech_talk";
 $wgNamespacesWithSubpages[NS_TECH] = true;  
 
 $wgContentNamespaces[] = 1600;
+$wgReadOnly = 'This wiki is currently being upgraded to a newer server.';
