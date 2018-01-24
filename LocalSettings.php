@@ -164,6 +164,8 @@ wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TitleBlacklist' );
 require_once "$IP/extensions/TorBlock/TorBlock.php";
 wfLoadExtension( 'WikiEditor' );
+$wgHiddenPrefs[] = 'usebetatoolbar';
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
 
 # End of automatically generated settings.
 # Add more configuration options below.
