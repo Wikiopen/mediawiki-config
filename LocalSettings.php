@@ -15,11 +15,16 @@ if ( !defined( 'MEDIAWIKI' ) ) {
         exit;
 }
 # Load PrivateSettings (e.g. wgDBpassword)
-if ( file_exists('/var/www/html/w/config/PrivateSettings.php') ) {
-        require_once( "/var/www/html/w/config/PrivateSettings.php" );
-} else {
-        require_once( "/srv/mediawiki/config/PrivateSettings.php" );
-}
+require_once( "/srv/mediawiki/config/PrivateSettings.php" );
+
+$wgSMTP = array(
+        'host' => 'mailserver.wiki.org.uk',
+        'IDHost' => 'wiki.org.uk',
+        'port' => 25,
+        //'username' => '',
+        //'password' => '',
+        //'auth' => false
+);
 
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
