@@ -20,7 +20,7 @@ require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 $wgSMTP = array(
         'host' => 'mailserver.wiki.org.uk',
         'IDHost' => 'wiki.org.uk',
-        'port' => 25,
+        'port' => 2525,
         //'username' => '',
         //'password' => '',
         //'auth' => false
