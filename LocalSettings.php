@@ -18,7 +18,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 $wgSMTP = array(
-        'host' => 'mailserver.wiki.org.uk',
+        'host' => 'wiki.org.uk',
         'IDHost' => 'wiki.org.uk',
         'port' => 2525,
         //'username' => '',
