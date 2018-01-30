@@ -41,7 +41,7 @@ $wgScriptPath = "/w";
 $wgArticlePath = "/wiki/$1";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://wiki.org.uk";
+$wgServer = "https://world.wiki.org.uk";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
