@@ -75,15 +75,19 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 # Experimental charset support for MySQL 5.0.
 $wgDBmysql5 = false;
 
-## Shared memory settings
-$wgMainCacheType = CACHE_NONE;
-$wgMemCachedServers = [];
+## cache stuff 
+$wgMainCacheType = CACHE_MEMCACHED;
+$wgParserCacheType = CACHE_MEMCACHED; # optional
+$wgMessageCacheType = CACHE_MEMCACHED; # optional
+$wgMemCachedServers = array( "127.0.0.1:11211" );
 
+$wgSessionsInObjectCache = true; # optional
+$wgSessionCacheType = CACHE_MEMCACHED; # optional
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = true;
-#$wgUseImageMagick = true;
-#$wgImageMagickConvertCommand = "/usr/bin/convert";
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = true;
