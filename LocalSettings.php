@@ -152,7 +152,7 @@ wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
-wgGroupPermissions['*']['mwoauthmanagemygrants'] = true
+wgGroupPermissions['*']['mwoauthmanagemygrants'] = true;
 #jokes
 $wgGroupPermissions['unblockable']['edit'] = false;
 $wgGroupPermissions['advancedpermissions']['edit'] = false;
