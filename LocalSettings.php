@@ -246,7 +246,8 @@ $wgGroupPermissions['sysop']['mwoauthupdateownconsumer'] = true;
 $wgGroupPermissions['sysop']['mwoauthmanageconsumer'] = true;
 $wgGroupPermissions['sysop']['mwoauthsuppress'] = true;
 $wgGroupPermissions['sysop']['mwoauthviewsuppressed'] = true;
-$wgGroupPermissions['sysop']['mwoauthviewprivate'] = true;    
+$wgGroupPermissions['sysop']['mwoauthviewprivate'] = true;   
+$wgGroupPermissions['sysop']['mwoauthproposeconsumer'] = true;
 #Disable all core TALK namespaces except for trusted
 $wgNamespaceProtection[NS_TALK] = ['trusted-edit'];
 $wgNamespaceProtection[NS_USER_TALK] = ['trusted-edit'];
