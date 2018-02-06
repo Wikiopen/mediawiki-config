@@ -152,6 +152,56 @@ wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
+wfLoadExtension( 'CiteThisPage' );
+wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtension( 'Echo' );
+wfLoadExtension( 'Editcount' );
+wfLoadExtension( 'Gadgets' );
+wfLoadExtension( 'ImageMap' );
+wfLoadExtension( 'InputBox' );
+wfLoadExtension( 'Interwiki' );
+wfLoadExtension( 'LocalisationUpdate' );
+wfLoadExtension( 'Nuke' );
+wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'PdfHandler' );
+wfLoadExtension( 'Poem' );
+wfLoadExtension( 'Renameuser' );
+require_once "$IP/extensions/Scribunto/Scribunto.php";
+$wgScribuntoDefaultEngine = 'luastandalone';
+wfLoadExtension( 'SpamBlacklist' );
+wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+wfLoadExtension( 'TitleBlacklist' );
+require_once "$IP/extensions/TorBlock/TorBlock.php";
+wfLoadExtension( 'WikiEditor' );
+$wgHiddenPrefs[] = 'usebetatoolbar';
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
+
+# End of automatically generated settings.
+# Add more configuration options below.
+$wgMetrolookDisableAvatar = true;
+$wgGroupPermissions['sysop']['abusefilter-modify'] = true;
+$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+$wgGroupPermissions['*']['abusefilter-view'] = true;
+$wgGroupPermissions['*']['abusefilter-log'] = true;
+$wgGroupPermissions['sysop']['abusefilter-private'] = true;
+$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+$wgGroupPermissions['user']['move'] = false;
+$wgGroupPermissions['sysop']['move'] = true;
+$wgGroupPermissions['bureaucrat']['upload'] = true;
+$wgGroupPermissions['sysop']['createtalk'] = true;
+$wgGroupPermissions['user']['createtalk'] = false;
+$wgGroupPermissions['user']['upload'] = false;
+$wgGroupPermissions['godpowerz']['edit'] = false;
+
+#ninja group - Arthur
+$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+$wgGroupPermissions['ninja']['hideuser'] = true;
+$wgGroupPermissions['ninja']['unblockself'] = true;
+$wgGroupPermissions['ninja']['suppressrevision'] = true;
+$wgGroupPermissions['ninja']['deletelogentry'] = true;
+$wgGroupPermissions['ninja']['deleterevision'] = true;
+$wgGroupPermissions['ninja']['viewsuppressed'] = true;
+
 $wgGroupPermissions['*']['mwoauthmanagemygrants'] = true;
 #jokes
 $wgGroupPermissions['unblockable']['edit'] = false;
