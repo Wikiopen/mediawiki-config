@@ -76,13 +76,9 @@ $wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
 $wgDBmysql5 = false;
 
 ## cache stuff 
-$wgMainCacheType = CACHE_MEMCACHED;
-$wgParserCacheType = CACHE_MEMCACHED; # optional
-$wgMessageCacheType = CACHE_MEMCACHED; # optional
-$wgMemCachedServers = array( "127.0.0.1:11211" );
-
-$wgSessionsInObjectCache = true; # optional
-$wgSessionCacheType = CACHE_MEMCACHED; # optional
+$wgMainCacheType = CACHE_NONE;
+$wgParserCacheType = CACHE_NONE; # optional
+$wgMessageCacheType = CACHE_NONE; # optional
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = true;
