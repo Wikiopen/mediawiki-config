@@ -235,7 +235,7 @@ $wgGroupPermissions['sysop']['interwiki'] = true;
 $wgAllowUserJs = true;
 $wgAllowUserCss = true;
 $wgNotificationSenderName = "World Wiki Notifications";
-$wgMWOAuthSecureTokenTransfer = true;
+$wgMWOAuthSecureTokenTransfer = false;
 #revdel for admins
 $wgGroupPermissions['sysop']['deleterevision'] = true;
 $wgGroupPermissions['sysop']['mwoauthupdateownconsumer'] = true;
