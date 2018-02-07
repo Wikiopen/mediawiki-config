@@ -19,7 +19,7 @@ require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 $wgSMTP = array(
         'host' => 'mailserver.worldwiki.tk',
-        'IDHost' => 'wiki.org.uk',
+        'IDHost' => 'worldwiki.tk',
         'port' => 2525,
         //'username' => '',
         //'password' => '',
@@ -56,7 +56,8 @@ $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
 $wgEmergencyContact = "staff@worldwiki.tk";
-$wgPasswordSender = "worldwiki@worldwiki.tk";
+$wgPasswordSender = "wiki@worldwiki.tk";
+$wgNotificationSenderName = "World Wiki Notifications";
 
 $wgEnotifUserTalk = true; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -101,7 +102,7 @@ $wgShellLocale = "C.UTF-8";
 ## Set $wgCacheDirectory to a writable directory on the web server
 ## to make your wiki go slightly faster. The directory should not
 ## be publically accessible from the web.
-#$wgCacheDirectory = "$IP/cache";
+$wgCacheDirectory = "/srv/mediawiki/cache";
 
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
@@ -124,7 +125,7 @@ $wgRightsIcon = "$wgResourceBasePath/resources/assets/licenses/cc-by-sa.png";
 $wgDiff3 = "/usr/bin/diff3";
 
 # The following permissions were set based on your choice in the installer
-$wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['*']['edit'] = true;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
@@ -136,10 +137,8 @@ wfLoadSkin( 'Metrolook' );
 wfLoadSkin( 'Modern' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Timeless' );
+wfLoadSkin( 'MinervaNeue' );
 wfLoadSkin( 'Vector' );
-
-$wgRawHtml = true;
-
 # Enabled extensions. Most of the extensions are enabled by adding
 # wfLoadExtensions('ExtensionName');
 # to LocalSettings.php. Check specific extension documentation for more details.
@@ -166,10 +165,12 @@ wfLoadExtension( 'Renameuser' );
 require_once "$IP/extensions/Scribunto/Scribunto.php";
 $wgScribuntoDefaultEngine = 'luastandalone';
 wfLoadExtension( 'SpamBlacklist' );
+wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TitleBlacklist' );
 require_once "$IP/extensions/TorBlock/TorBlock.php";
 wfLoadExtension( 'WikiEditor' );
+
 $wgHiddenPrefs[] = 'usebetatoolbar';
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 
@@ -182,29 +183,20 @@ $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 $wgGroupPermissions['sysop']['abusefilter-private'] = true;
 $wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-$wgGroupPermissions['user']['move'] = false;
 $wgGroupPermissions['sysop']['move'] = true;
 $wgGroupPermissions['bureaucrat']['upload'] = true;
 $wgGroupPermissions['sysop']['createtalk'] = true;
-$wgGroupPermissions['user']['createtalk'] = false;
-$wgGroupPermissions['user']['upload'] = false;
-$wgGroupPermissions['godpowerz']['edit'] = false;
 
-#ninja group - Arthur
+
+#staff group
 $wgGroupPermissions['sysop']['abusefilter-revert'] = true;
-$wgGroupPermissions['ninja']['hideuser'] = true;
-$wgGroupPermissions['ninja']['unblockself'] = true;
-$wgGroupPermissions['ninja']['suppressrevision'] = true;
-$wgGroupPermissions['ninja']['deletelogentry'] = true;
-$wgGroupPermissions['ninja']['deleterevision'] = true;
-$wgGroupPermissions['ninja']['viewsuppressed'] = true;
-
+$wgGroupPermissions['staff']['hideuser'] = true;
+$wgGroupPermissions['staff']['unblockself'] = true;
+$wgGroupPermissions['staff']['suppressrevision'] = true;
+$wgGroupPermissions['staff']['deletelogentry'] = true;
+$wgGroupPermissions['staff']['deleterevision'] = true;
+$wgGroupPermissions['staff']['viewsuppressed'] = true;
 $wgGroupPermissions['*']['mwoauthmanagemygrants'] = true;
-#jokes
-$wgGroupPermissions['unblockable']['edit'] = false;
-$wgGroupPermissions['advancedpermissions']['edit'] = false;
-$wgGroupPermissions['expert']['edit'] = false;
-
 #block
 $wgCookieSetOnAutoblock = true;
 
@@ -213,28 +205,16 @@ $wgTorLoadNodes = true;
 $wgTorIPs = [ '172.31.3.168' ];
 $wgGroupPermissions['*']['torunblocked'] = false;
 $wgGroupPermissions['user']['torunblocked'] = false;
-#disable API
+#Enable API
 $wgEnableAPI = true;
 
 #for mobile view
-
-wfLoadSkin( 'MinervaNeue' );
-wfLoadExtension( 'MobileFrontend' );
 $wgMFAutodetectMobileView = true;
 $wgMFDefaultSkinClass = 'SkinMinerva';
-
-# Prevent all but `trusted` from creating pages (createpage)
-$wgGroupPermissions['trusted']['move'] = true;
-$wgGroupPermissions['*']['move'] = false;
-$wgGroupPermissions['trusted']['createpage'] = true;
-$wgGroupPermissions['*']['createpage'] = false;
-
 # other settings
-$wgGroupPermissions['user']['createpage'] = false;
 $wgGroupPermissions['sysop']['interwiki'] = true;
 $wgAllowUserJs = true;
 $wgAllowUserCss = true;
-$wgNotificationSenderName = "World Wiki Notifications";
 $wgMWOAuthSecureTokenTransfer = false;
 #revdel for admins
 $wgGroupPermissions['sysop']['deleterevision'] = true;
@@ -244,62 +224,13 @@ $wgGroupPermissions['sysop']['mwoauthsuppress'] = true;
 $wgGroupPermissions['sysop']['mwoauthviewsuppressed'] = true;
 $wgGroupPermissions['sysop']['mwoauthviewprivate'] = true;   
 $wgGroupPermissions['sysop']['mwoauthproposeconsumer'] = true;
-#Disable all core TALK namespaces except for trusted
-$wgNamespaceProtection[NS_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_USER_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_PROJECT_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_FILE_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_MEDIAWIKI_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_TEMPLATE_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_HELP_TALK] = ['trusted-edit'];
-$wgNamespaceProtection[NS_CATEGORY_TALK] = ['trusted-edit'];
-#trusted edit group
-$wgGroupPermissions['trusted']['trusted-edit'] = true;
 
 #Protect the template space for sysops only
-$wgNamespaceProtection[NS_TEMPLATE] = ['sysop-edit'];
-$wgGroupPermissions['sysop']['sysop-edit'] = true;
-
-#GEO namespace
-define("NS_GEO", 3000);
-define("NS_GEO_TALK", 3001);
-$wgExtraNamespaces[NS_GEO] = "Geo";
-$wgExtraNamespaces[NS_GEO_TALK] = "Geo_talk";
-$wgContentNamespaces[] = 3000;
-#GEO namespace protection
-$wgNamespaceProtection[NS_GEO] = ['geomapper-edit'];
-$wgNamespaceProtection[NS_GEO_TALK] = ['geomapper-edit'];
-$wgGroupPermissions['geomapper']['geomapper-edit'] = true;
-
-#FA namespace
-define("NS_FA", 3002);
-define("NS_FA_TALK", 3003);
-$wgExtraNamespaces[NS_FA] = "Featured";
-$wgExtraNamespaces[NS_FA_TALK] = "Featured_talk";
-$wgContentNamespaces[] = 3002;
-#FA namespace protection
-$wgNamespaceProtection[NS_FA] = ['trusted-edit'];
-$wgNamespaceProtection[NS_FA_TALK] = ['trusted-edit'];
-
-#BIO namespace
-define("NS_BIO", 3004);
-define("NS_BIO_TALK", 3005);
-$wgExtraNamespaces[NS_BIO] = "Bio";
-$wgExtraNamespaces[NS_BIO_TALK] = "Bio_talk";
-$wgContentNamespaces[] = 3004;
-#BIO namespace protection
-$wgNamespaceProtection[NS_BIO] = ['trusted-edit'];
-$wgNamespaceProtection[NS_BIO_TALK] = ['trusted-edit'];
-
-
-
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
 
 $wgExtraNamespaces[NS_TECH] = "Tech";
 $wgExtraNamespaces[NS_TECH_TALK] = "Tech_talk";
-
 $wgNamespacesWithSubpages[NS_TECH] = true;  
-
 $wgContentNamespaces[] = 1600;
 //$wgReadOnly = 'This wiki is currently being upgraded to a newer server.';
