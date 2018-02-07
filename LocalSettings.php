@@ -18,7 +18,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 $wgSMTP = array(
-        'host' => 'mailserver.wiki.org.uk',
+        'host' => 'mailserver.worldwiki.tk',
         'IDHost' => 'wiki.org.uk',
         'port' => 2525,
         //'username' => '',
@@ -41,7 +41,7 @@ $wgScriptPath = "/w";
 $wgArticlePath = "/wiki/$1";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://world.wiki.org.uk";
+$wgServer = "https://world.worldwiki.tk";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -55,8 +55,8 @@ $wgFavicon = "$wgResourceBasePath/images/b/bc/Wiki.png";
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "staff@wiki.org.uk";
-$wgPasswordSender = "worldwiki@wiki.org.uk";
+$wgEmergencyContact = "staff@worldwiki.tk";
+$wgPasswordSender = "worldwiki@worldwiki.tk";
 
 $wgEnotifUserTalk = true; # UPO
 $wgEnotifWatchlist = false; # UPO
