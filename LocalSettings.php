@@ -18,9 +18,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 $wgSMTP = array(
-        'host' => 'mailserver.worldwiki.tk',
-        'IDHost' => 'worldwiki.tk',
-        'port' => 2525,
+        'host' => 'mailserver.wikiopen.tk',
+        'IDHost' => 'wikiopen.tk',
+        'port' => 25,
         //'username' => '',
         //'password' => '',
         //'auth' => false
@@ -29,7 +29,7 @@ $wgSMTP = array(
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "World Wiki";
+$wgSitename = "Wikiopen Wiki";
 $wgMetaNamespace = "Project";
 
 ## The URL base path to the directory containing the wiki;
@@ -41,23 +41,23 @@ $wgScriptPath = "/w";
 $wgArticlePath = "/wiki/$1";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://world.worldwiki.tk";
+$wgServer = "https://wiki.wikiopen.tk";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
 
 ## The URL path to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
-$wgLogo = "$wgResourceBasePath/images/b/bc/Wiki.png";
-$wgFavicon = "$wgResourceBasePath/images/b/bc/Wiki.png";
+#$wgLogo = "$wgResourceBasePath/images/b/bc/Wiki.png";
+#$wgFavicon = "$wgResourceBasePath/images/b/bc/Wiki.png";
 ## UPO means: this is also a user preference option
 
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "staff@worldwiki.tk";
-$wgPasswordSender = "wiki@worldwiki.tk";
-$wgNotificationSenderName = "World Wiki Notifications";
+$wgEmergencyContact = "staff@wikiopen.tk";
+$wgPasswordSender = "wiki@wikiopen.tk";
+$wgNotificationSenderName = "Wikiopen Wiki Notifications";
 
 $wgEnotifUserTalk = true; # UPO
 $wgEnotifWatchlist = false; # UPO
