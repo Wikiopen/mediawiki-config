@@ -103,7 +103,7 @@ $wgShellLocale = "C.UTF-8";
 ## to make your wiki go slightly faster. The directory should not
 ## be publically accessible from the web.
 $wgCacheDirectory = "/srv/mediawiki/cache";
-
+$wgLogo = "/srv/mediawiki//images/b/bc/wiki.png
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
 $wgRawHtml = true;
