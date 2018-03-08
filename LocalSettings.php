@@ -186,7 +186,7 @@ $wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 $wgGroupPermissions['sysop']['move'] = true;
 $wgGroupPermissions['bureaucrat']['upload'] = true;
 $wgGroupPermissions['sysop']['createtalk'] = true;
-
+$wgCaptchaClass = 'ReCaptcha';
 
 #staff group
 $wgGroupPermissions['sysop']['abusefilter-revert'] = true;
