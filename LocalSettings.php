@@ -148,7 +148,7 @@ wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
-wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptcha' ]);
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'Gadgets' );
