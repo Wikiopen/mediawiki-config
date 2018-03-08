@@ -149,6 +149,7 @@ wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha' ]);
+$wgCaptchaClass = 'ReCaptchaNoCaptcha';
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'Gadgets' );
