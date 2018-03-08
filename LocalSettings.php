@@ -148,7 +148,7 @@ wfLoadExtension( 'AntiSpoof' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
-wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptcha' ]);
+wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha' ]);
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'Gadgets' );
@@ -186,7 +186,7 @@ $wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 $wgGroupPermissions['sysop']['move'] = true;
 $wgGroupPermissions['bureaucrat']['upload'] = true;
 $wgGroupPermissions['sysop']['createtalk'] = true;
-$wgCaptchaClass = 'ReCaptcha';
+$wgCaptchaClass = 'ReCaptchaNoCaptcha';
 
 #staff group
 $wgGroupPermissions['sysop']['abusefilter-revert'] = true;
