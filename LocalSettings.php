@@ -153,6 +153,7 @@ wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha' ]);
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 wfLoadExtension( 'CodeEditor' );
 wfLoadExtension( 'CookieWarning' );
+$wgCookieWarningEnabled = true;
 $wgCookieWarningGeoIPLookup = 'js';
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Editcount' );
