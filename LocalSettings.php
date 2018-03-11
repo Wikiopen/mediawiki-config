@@ -163,6 +163,7 @@ wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'LocalisationUpdate' );
 wfLoadExtension( 'Math' );
+$wgMathValidModes = [ 'source', ];
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OAuth' );
 wfLoadExtension( 'ParserFunctions' );
