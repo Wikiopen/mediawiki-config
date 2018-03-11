@@ -145,11 +145,15 @@ wfLoadSkin( 'Vector' );
 # The following extensions were automatically enabled:
 wfLoadExtension( 'AbuseFilter' );
 wfLoadExtension( 'AntiSpoof' );
+wfLoadExtension( 'BetaFeatures' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'CiteThisPage' );
 wfLoadExtensions([ 'ConfirmEdit', 'ConfirmEdit/ReCaptchaNoCaptcha' ]);
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
+wfLoadExtension( 'CodeEditor' );
+wfLoadExtension( 'CookieWarning' );
+$wgCookieWarningGeoIPLookup = 'js';
 wfLoadExtension( 'Echo' );
 wfLoadExtension( 'Editcount' );
 wfLoadExtension( 'Gadgets' );
@@ -157,6 +161,7 @@ wfLoadExtension( 'ImageMap' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'LocalisationUpdate' );
+wfLoadExtension( 'Math' );
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OAuth' );
 wfLoadExtension( 'ParserFunctions' );
@@ -171,6 +176,16 @@ wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 wfLoadExtension( 'TitleBlacklist' );
 require_once "$IP/extensions/TorBlock/TorBlock.php";
 wfLoadExtension( 'WikiEditor' );
+
+wfLoadExtension( 'MwEmbedSupport' );
+require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php";
+
+wfLoadExtension( 'UserMerge' );
+// By default nobody can use this function, enable for bureaucrat?
+$wgGroupPermissions['bureaucrat']['usermerge'] = true;
+
+// optional: default is array( 'sysop' )
+$wgUserMergeProtectedGroups = array( 'groupname' );
 
 $wgHiddenPrefs[] = 'usebetatoolbar';
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
