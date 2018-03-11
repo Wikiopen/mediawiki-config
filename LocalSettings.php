@@ -164,7 +164,7 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'LocalisationUpdate' );
 wfLoadExtension( 'Math' );
 $wgMathValidModes = [ 'source' ];
-$MathFullRestbaseURL = 'https://wikimedia.org/api/rest_';
+$wgMathFullRestbaseURL = 'https://wikimedia.org/api/rest_';
 wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'OAuth' );
 wfLoadExtension( 'ParserFunctions' );
@@ -188,7 +188,7 @@ wfLoadExtension( 'UserMerge' );
 $wgGroupPermissions['bureaucrat']['usermerge'] = true;
 
 // optional: default is array( 'sysop' )
-$wgUserMergeProtectedGroups = array( 'groupname' );
+$wgUserMergeProtectedGroups = [ 'groupname' ];
 
 $wgHiddenPrefs[] = 'usebetatoolbar';
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
