@@ -182,6 +182,7 @@ wfLoadExtension( 'WikiEditor' );
 
 wfLoadExtension( 'MwEmbedSupport' );
 require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php";
+$wgTmhUseBetaFeatures = true;
 
 wfLoadExtension( 'UserMerge' );
 // By default nobody can use this function, enable for bureaucrat?
